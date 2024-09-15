@@ -10,6 +10,8 @@ Specifically the following tasks are performed on the dataset:
 - **Pitch Homography**: Virtual Lines and Field Overlay for homographic pitch projection
 - **Ball movement analysis**: Top-Down projection for creating a tactical radar view for seeing the ball /players movement
 
+NOTE - Most of the visualizations are done using the *supervision* package which makes it very easy to visualize boxes, keypoints, tracking path, etc 
+
 Training details for models used in specific tasks:
 
 - **Object Detection**
@@ -18,6 +20,7 @@ Training details for models used in specific tasks:
   - Original images which are 1920 X 1080 are subject to post-processing to rescale to 1280 X 1280
   - 400 images from the dataset are annotated with the required classes
   - Ball detection is challenging because of small size and cluttered background so appropriate images are selected so that the detector can locate the ball in challenging conditions
+  - This is also the reason why the images are resized to 1280 X 1280 and not 640 X 640 because at 640 X 640 the ball will have very few pixels on it for accurate detection
 - **Tracking**
   - Track movement of the detected objects using ByteTrack  
 - **Team Classification**
