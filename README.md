@@ -24,7 +24,9 @@ Training details for models used in specific tasks:
 - **Tracking**
   - Track movement of the detected objects using ByteTrack  
 - **Team Classification**
-  - Embedding analysis for players with SigLIP and UMAP. Then classify into different teams using K-Means Clustering
+  - The detected players with the YOLOv8 model are cropped into numpy arrays, pre-processed and passed into a pre-trained SigLIP model in HuggingFace
+  - This SigLIP model gives us the embeddings which are 768 dimensions in size. The embeddings are then scaled down to 3 dimensions using UMAP 
+  - The reduced embeddings are then classified into 2 clusters using K-Means Clustering to represent 2 different teams
 - **Keypoint Inference**
   - Detecting keypoint position in the field for real-time pitch understanding
 - **Pitch Homography**
