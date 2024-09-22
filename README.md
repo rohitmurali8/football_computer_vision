@@ -21,7 +21,8 @@ Training details for models used in specific tasks:
   - Used Pre-Trained YOLOv8 small model for fine-tuning on the DFL dataset to detect players, goalkeeper, referrees and ball
   - Goalkeepers are detected separate from players because they wear separate color jerseys
   - The output of the object detection model is shown in the figure below
-    ![Object_Detection][https://github.com/rohitmurali8/football_computer_vision/blob/master/images/Detection.png]
+    ![Detection](https://github.com/user-attachments/assets/aac49557-f762-4370-be1a-d08ee048f4f8)
+
 - **Tracking**
   - The detected objects are then passed into ByteTrack for tracking the movement of the objects across multiple images
   - ByeTrack internally uses a Kalman filter to predict the next state of the detected boxes and a data association algorithm (IoU, etc) to associate predicted and GT boxes in the next frame
