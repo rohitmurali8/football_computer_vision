@@ -1,6 +1,9 @@
 # football_computer_vision
 
 This project shows the use of computer vision to perform a deeper level analysis of the DFL - Bundesliga Data Shootout dataset.  
+![DFL](https://github.com/user-attachments/assets/c340963b-eda0-4eb7-b262-0d1d347394f5)
+
+
 Specifically the following tasks are performed on the dataset:
 
 - **Object Detection**: Use YOLOv8 model for detecting players, goalkeepers, referrees and ball
@@ -9,7 +12,7 @@ Specifically the following tasks are performed on the dataset:
 - **Keypoint Inference**: Detecting keypoint position in the field for real-time pitch understanding
 - **Pitch Homography**: Virtual Lines and Field Overlay for homographic pitch projection. Top-Down projection for creating a tactical radar view for seeing the ball /players movement
 
-NOTE - Most of the visualizations are done using the *supervision* package which makes it very easy to visualize boxes, keypoints, tracking path, etc 
+NOTE - Most of the visualizations are done using the *supervision* package (https://github.com/roboflow/supervision) which makes it very easy to visualize boxes, keypoints, tracking path, etc 
 
 Training details for models used in specific tasks:
 
